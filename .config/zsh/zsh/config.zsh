@@ -1,8 +1,6 @@
-if [[ -n $SSH_CONNECTION ]]; then
-  export PS1='%m:%3~%# '
-else
-  export PS1='%3~%# '
-fi
+#[jemez 0 (master) config-git]$
+
+export PS1='[%m %j $(git_super_status) %2~]$ '
 
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
