@@ -1,9 +1,6 @@
-#[jemez 0 (master) config-git]$
-
 export PS1='[%m %j $(git_super_status) %2~]$ '
 
-export LSCOLORS="exfxcxdxbxegedabagacad"
-export CLICOLOR=true
+export EDITOR='emacs -nw'
 
 fpath=($ZSH/functions $fpath)
 
