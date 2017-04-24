@@ -15,3 +15,7 @@ return_status() {
 }
 
 export PROMPT='[$(host_name) $(job_count) $(return_status) $(git_super_status) $(directory_name)]$ '
+
+precmd() {
+  title "zsh" "%m" "%55<...<%2~"
+}
