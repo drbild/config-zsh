@@ -1,5 +1,5 @@
 local ret_status="%(?:✓:✗)"
-export PS1='[%m %j ${ret_status} $(git_super_status) %2~] '
+PS1='[%m %j ${ret_status} $(git_super_status) %2~] '
 
 export EDITOR='emacs -nw'
 
