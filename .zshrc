@@ -17,6 +17,7 @@ typeset -U config_files
 config_files=($ZSH/**/*.zsh)
 
 # load the path files
+typeset -U path
 for file in ${(M)config_files:#*/path.zsh}
 do
     source $file
