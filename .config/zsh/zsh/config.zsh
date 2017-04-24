@@ -1,6 +1,3 @@
-local ret_status="%(?:✓:✗)"
-PS1='[%m %j ${ret_status} $(git_super_status) %2~] '
-
 export EDITOR='emacs -nw'
 
 fpath=($ZSH/functions $fpath)
