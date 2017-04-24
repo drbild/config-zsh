@@ -1,5 +1,3 @@
-export EDITOR='emacs -nw'
-
 fpath=($ZSH/functions $fpath)
 
 HISTFILE=~/.zsh_history
