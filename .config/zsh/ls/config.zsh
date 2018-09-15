@@ -8,5 +8,5 @@ case `uname -s` in
     (Linux)
 	;&
     (*)
-	export LS_OPTIONS="${LS_OPTIONS} -c -h --group-directories-first"
+	export LS_OPTIONS="${LS_OPTIONS} -h --group-directories-first"
 esac
