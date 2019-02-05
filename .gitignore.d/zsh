@@ -1,6 +1,8 @@
 *
 !/.config
 !/.config/zsh
+!/.config/zsh/aws-vault
+!/.config/zsh/aws-vault/prompt.zsh
 !/.config/zsh/ccache
 !/.config/zsh/ccache/env.zsh
 !/.config/zsh/emacs

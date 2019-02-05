@@ -14,7 +14,7 @@ return_status() {
   echo "%(?:✓:✗)"
 }
 
-export PROMPT='[$(host_name) $(job_count) $(return_status) $(git_super_status) $(directory_name)]$ '
+export PROMPT='[$(host_name) $(aws_vault_status) $(job_count) $(return_status) $(git_super_status) $(directory_name)]$ '
 
 precmd() {
   title "zsh" "%m" "%55<...<%2~"
