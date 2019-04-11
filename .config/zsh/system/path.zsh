@@ -16,10 +16,12 @@ function path_append() {
   fi
 }
 
-path_prepend /bin
-path_prepend /sbin
-path_prepend /usr/bin
-path_prepend /usr/sbin
-path_prepend /usr/local/bin
-path_prepend /usr/local/sbin
 path_prepend ~/bin
+
+path_append /usr/local/sbin
+path_append /usr/sbin
+path_append /sbin
+
+path_append /usr/local/bin
+path_append /usr/bin
+path_append /bin
