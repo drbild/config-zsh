@@ -10,6 +10,9 @@
 !/.config/zsh/git
 !/.config/zsh/git/aliases.zsh
 !/.config/zsh/git/plugins.zsh
+!/.config/zsh/go
+!/.config/zsh/go/env.zsh
+!/.config/zsh/go/path.zsh
 !/.config/zsh/ls
 !/.config/zsh/ls/aliases.zsh
 !/.config/zsh/ls/config.zsh
