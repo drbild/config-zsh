@@ -16,6 +16,13 @@ fi
 typeset -U config_files
 config_files=($ZSH/**/*.zsh)
 
+# load the env files
+typeset -U path
+for file in ${(M)config_files:#*/env.zsh}
+do
+    source $file
+done
+
 # load the path files
 typeset -U path
 for file in ${(M)config_files:#*/path.zsh}
@@ -24,7 +31,7 @@ do
 done
 
 # load everything but the path and completion files
-for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
+for file in ${${${config_files:#*/path.zsh}:#*/completion.zsh}:#*/env.zsh}
 do
     source $file
 done
