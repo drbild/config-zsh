@@ -16,6 +16,4 @@ function path_append() {
   fi
 }
 
-if type "go" > /dev/null; then
-  path_prepend "${GOPATH}/bin"
-fi
+path_prepend "${GOPATH}/bin"
