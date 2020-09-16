@@ -1,1 +1,1 @@
-export EDITOR='emacs -nw'
+export EDITOR='emacsclient -tty --alternate-editor=""'
