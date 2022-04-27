@@ -1,6 +1,9 @@
 *
 !/.config
 !/.config/zsh
+!/.config/zsh/asdf
+!/.config/zsh/asdf/completion.zsh
+!/.config/zsh/asdf/plugins.zsh
 !/.config/zsh/aws-vault
 !/.config/zsh/aws-vault/prompt.zsh
 !/.config/zsh/ccache
