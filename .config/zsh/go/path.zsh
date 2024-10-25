@@ -16,6 +16,17 @@ function path_append() {
   fi
 }
 
-if [[ -n "$GOPATH" ]]; then
-  path_prepend "${GOPATH}/bin"
-fi
+function set_golang_path() {
+  local system_gopath_bin="${HOME}/.go/bin"
+
+  # Include the system Go installs in $PATH when it is active, as
+  # implied by GOPATH.
+  if [[ -n "$GOPATH" ]]; then
+    path_prepend "${system_gopath_bin}"
+  else
+    path_remove "${system_gopath_bin}"
+  fi
+}
+
+autoload -U add-zsh-hook
+add-zsh-hook precmd set_golang_path

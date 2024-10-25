@@ -15,18 +15,35 @@ resolve_cmd_path() {
   fi
 }
 
+unset_golang_env() {
+  unset GOPATH
+}
+
+set_asdf_golang_env() {
+  # Use the default GOPATH for asdf isntall
+  unset GOPATH
+}
+
 set_system_golang_env() {
+  local system_gopath="${HOME}/.go"
+
   # Override the GOPATH default of ~/go
-  export GOPATH="${HOME}/.go"
+  export GOPATH
+  GOPATH="${system_gopath}"
 }
 
 set_golang_env() {
   local go_path
   go_path=$(resolve_cmd_path go)
 
-  # If the active go is not asdf-installed, configure the system
-  # env
-  if [[ -n "$go_path" && "$go_path" != *".asdf/installs"* ]]; then
+  if [[ -z "$go_path" ]]; then
+    # Go is not installed.
+    unset_golang_env
+  elif [[ "$go_path" = *".asdf/installs"* ]]; then
+    # Go is an asdf install
+    set_asdf_golang_env
+  else
+    # Go is a system install
     set_system_golang_env
   fi
 }
