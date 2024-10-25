@@ -16,4 +16,6 @@ function path_append() {
   fi
 }
 
-path_prepend "${GOPATH}/bin"
+if [[ -n "$GOPATH" ]]; then
+  path_prepend "${GOPATH}/bin"
+fi
